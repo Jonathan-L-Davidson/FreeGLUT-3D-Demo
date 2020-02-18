@@ -1,15 +1,26 @@
-
 #include "GLUT.h"
 
 int main(int argc, char** argv) {
+
+	// init GLUT and create window
 	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
+	glutInitWindowPosition(100, 100);
+	glutInitWindowSize(900, 900);
+	glutCreateWindow("Lighthouse3D- GLUT Tutorial");
 
-	/* Create a single window with a keyboard and display callback */
-	glutCreateWindow("GLUT Test");
-	glutKeyboardFunc(&keyboard);
-	glutDisplayFunc(&display);
+	// register callbacks
+	glutDisplayFunc(display);
+	glutReshapeFunc(changeSize);
 
-	/* Run the GLUT event loop */
+	glutSpecialFunc(ProcessKeyEvents);
+
+
+	// here is the idle func registration
+	glutIdleFunc(display);
+
+	// enter GLUT event processing cycle
 	glutMainLoop();
-	return EXIT_SUCCESS;
+
+	return 1;
 }

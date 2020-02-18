@@ -1,4 +1,5 @@
 ﻿  GLUT.cpp
-  main.cpp
-  Generating Code...
+C:\Users\jonat\Documents\FreeGLUT-3D-Demo\FreeGLUT-3D-Demo\src\GLUT.cpp(43,41): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\jonat\Documents\FreeGLUT-3D-Demo\FreeGLUT-3D-Demo\src\GLUT.cpp(43,28): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\jonat\Documents\FreeGLUT-3D-Demo\FreeGLUT-3D-Demo\src\GLUT.cpp(86,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   FreeGLUT-3D-Demo.vcxproj -> C:\Users\jonat\Documents\FreeGLUT-3D-Demo\x64\Debug\FreeGLUT-3D-Demo.exe
