@@ -1,4 +1,6 @@
 #include "GLUT.h"
+#include "MasterManager.h"
+#include "Callbacks.hpp" // This is where "mgr" is defined.
 
 int main(int argc, char** argv) {
 
@@ -7,19 +9,18 @@ int main(int argc, char** argv) {
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowPosition(100, 100);
 	glutInitWindowSize(900, 900);
-	glutCreateWindow("Lighthouse3D- GLUT Tutorial");
+	glutCreateWindow("FreeGLUT Demo");
 
-	// register callbacks
-	glutDisplayFunc(display);
-	glutReshapeFunc(changeSize);
+	//mgr->Initialise(argc, argv);
 
-	glutSpecialFunc(ProcessKeyEvents);
+	glutDisplayFunc(Draw);
+	glutReshapeFunc(ChangeSize);
 
+	glutKeyboardFunc(KeyEvents);
+	glutSpecialFunc(SpecialKeyEvents);
 
-	// here is the idle func registration
-	glutIdleFunc(display);
+	glutIdleFunc(Update);
 
-	// enter GLUT event processing cycle
 	glutMainLoop();
 
 	return 1;

@@ -143,9 +143,18 @@
   <ItemGroup>
     <ClCompile Include="src\GLUT.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MasterManager.cpp" />
+    <ClCompile Include="src\Object.cpp" />
+    <ClCompile Include="src\ObjectManager.cpp" />
+    <ClCompile Include="src\RenderManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="headers\Callbacks.hpp" />
     <ClInclude Include="headers\GLUT.h" />
+    <ClInclude Include="headers\MasterManager.h" />
+    <ClInclude Include="headers\Object.h" />
+    <ClInclude Include="headers\ObjectManager.h" />
+    <ClInclude Include="headers\RenderManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Source.txt" />
