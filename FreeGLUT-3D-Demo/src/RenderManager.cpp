@@ -26,17 +26,19 @@ void RenderManager::Display()
 
     glRotatef(m_camera->angle, 0.0f, 1.0f, 0.0f);
 
+    glColor3f(0.5f, 0.5f, 0.5f);
     m_objectManager->DrawObjects();
 
     // Draw ground
     glColor3f(0.9f, 0.9f, 0.9f);
     glBegin(GL_QUADS);
-    glVertex3f(-100.0f, 0.0f, -100.0f);
-    glVertex3f(-100.0f, 0.0f, 100.0f);
-    glVertex3f(100.0f, 0.0f, 100.0f);
-    glVertex3f(100.0f, 0.0f, -100.0f);
+        glVertex3f(-100.0f, 0.0f, -100.0f);
+        glVertex3f(-100.0f, 0.0f, 100.0f);
+        glVertex3f(100.0f, 0.0f, 100.0f);
+        glVertex3f(100.0f, 0.0f, -100.0f);
     glEnd();
 
+    /*
     // Draw 36 SnowMen
     for (int i = -3; i < 3; i++)
         for (int j = -3; j < 3; j++) {
@@ -44,7 +46,7 @@ void RenderManager::Display()
             glTranslatef(i * 10.0, 0, j * 10.0);
             drawSnowMan();
             glPopMatrix();
-        }
+        }*/
 
     glutSwapBuffers();
 }
